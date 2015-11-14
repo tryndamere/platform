@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xxx.yyy.demo.persistence.TestTableMapper">
+
+    <sql id="testABaseColumnSql">
+        id,
+        age,
+        bz,
+        name,
+        create_time
+    </sql>
+
+    <sql id="testABaseWhereSql">
+        <if test="map!=null">
+            <where>
+                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.id)">
+                    id = #{map.id}
+                </if>
+                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.age)">
+                    AND age = #{map.age}
+                </if>
+                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.bz)">
+                    AND bz = #{map.bz}
+                </if>
+                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.name)">
+                    AND name = #{map.name}
+                </if>
+                <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(map.createTime)">
+                    AND create_time = #{map.createTime}
+                </if>
+            </where>
+        </if>
+    </sql>
+
+    <insert id="insertTestA" parameterType="xxx.yyy.demo.entity.TestTable">
+        INSERT INTO test_a(
+        <include refid="testABaseColumnSql"/>
+        )VALUES(
+        #{id},
+        #{age},
+        #{bz},
+        #{name},
+        #{createTime}
+        )
+    </insert>
+
+
+    <delete id="deleteTestAById" parameterType="String">
+        DELETE FROM test_a WHERE id = #{id}
+    </delete>
+
+    <update id="updateTestA" parameterType="xxx.yyy.demo.entity.TestTable">
+        UPDATE test_a
+        <set>
+            <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(age)">
+                age = #{age} ,
+            </if>
+            <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(bz)">
+                bz = #{bz} ,
+            </if>
+            <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(name)">
+                name = #{name} ,
+            </if>
+            <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(createTime)">
+                create_time = #{createTime} ,
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <select id="searchTestAByParams" parameterType="java.util.HashMap" resultMap="testAMap">
+        SELECT
+        <include refid="testABaseColumnSql"/>
+        FROM test_a
+        <include refid="testABaseWhereSql"/>
+    </select>
+
+    <resultMap type="xxx.yyy.demo.entity.TestTable" id="testAMap">
+        <id column="id" property="id"/>
+        <result column="age" property="age"/>
+        <result column="bz" property="bz"/>
+        <result column="name" property="name"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+</mapper>
