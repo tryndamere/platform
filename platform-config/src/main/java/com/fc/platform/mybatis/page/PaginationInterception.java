@@ -1,12 +1,12 @@
-package com.hyxt.platform.mybatis.page;
+package com.fc.platform.mybatis.page;
 
-import com.hyxt.platform.commons.page.PageRequest;
-import com.hyxt.platform.commons.page.Pageable;
-import com.hyxt.platform.mybatis.page.dialect.Dialect;
-import com.hyxt.platform.mybatis.page.dialect.MysqlDialect;
-import com.hyxt.platform.mybatis.page.dialect.OracleDialect;
-import com.hyxt.platform.mybatis.page.util.PageUtils;
-import com.hyxt.platform.mybatis.page.util.ReflectUtil;
+import com.fc.platform.commons.page.PageRequest;
+import com.fc.platform.commons.page.Pageable;
+import com.fc.platform.mybatis.page.dialect.MysqlDialect;
+import com.fc.platform.mybatis.page.util.PageUtils;
+import com.fc.platform.mybatis.page.dialect.Dialect;
+import com.fc.platform.mybatis.page.dialect.OracleDialect;
+import com.fc.platform.mybatis.page.util.ReflectUtil;
 import org.apache.ibatis.executor.ErrorContext;
 import org.apache.ibatis.executor.ExecutorException;
 import org.apache.ibatis.executor.statement.RoutingStatementHandler;

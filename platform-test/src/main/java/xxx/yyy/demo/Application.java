@@ -1,8 +1,8 @@
 package xxx.yyy.demo;
 
-import com.hyxt.platform.commons.page.Page;
-import com.hyxt.platform.commons.page.PageRequest;
-import com.hyxt.platform.commons.page.Pageable;
+import com.fc.platform.commons.page.Page;
+import com.fc.platform.commons.page.PageRequest;
+import com.fc.platform.commons.page.Pageable;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

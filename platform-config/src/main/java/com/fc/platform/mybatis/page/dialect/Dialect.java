@@ -1,4 +1,4 @@
-package com.hyxt.platform.mybatis.page.dialect;
+package com.fc.platform.mybatis.page.dialect;
 
 public abstract class Dialect {
 

@@ -1,4 +1,4 @@
-package com.hyxt.platform.mybatis.page.util;
+package com.fc.platform.mybatis.page.util;
 
 import java.lang.reflect.Field;
 

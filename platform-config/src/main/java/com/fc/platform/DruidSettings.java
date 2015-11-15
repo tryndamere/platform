@@ -1,4 +1,4 @@
-package com.hyxt.platform;
+package com.fc.platform;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

@@ -1,4 +1,4 @@
-package com.hyxt.platform.mybatis.page.dialect;
+package com.fc.platform.mybatis.page.dialect;
 
 /**
  * Created by rocky on 14-6-4.

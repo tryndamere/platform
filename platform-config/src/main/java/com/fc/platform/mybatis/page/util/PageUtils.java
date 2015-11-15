@@ -1,6 +1,6 @@
-package com.hyxt.platform.mybatis.page.util;
+package com.fc.platform.mybatis.page.util;
 
-import com.hyxt.platform.commons.page.Pageable;
+import com.fc.platform.commons.page.Pageable;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.mapping.BoundSql;
 

@@ -1,4 +1,4 @@
-package com.hyxt.platform;
+package com.fc.platform;
 
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;

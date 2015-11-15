@@ -1,6 +1,6 @@
-package com.hyxt.platform;
+package com.fc.platform;
 
-import com.hyxt.platform.mybatis.page.PaginationInterception;
+import com.fc.platform.mybatis.page.PaginationInterception;
 import org.apache.ibatis.plugin.Interceptor;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.annotation.Bean;
